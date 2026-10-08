@@ -3,6 +3,8 @@ import { AuthProvider, useAuth } from './hooks/useAuth';
 import LoginPage from './pages/LoginPage';
 import DashboardLayout from './components/DashboardLayout';
 import SmartClipboardPage from './pages/SmartClipboardPage';
+import OrderReconciliationPage from './pages/OrderReconciliationPage';
+import ReverseLogisticsPage from './pages/ReverseLogisticsPage';
 import SettingsPage from './pages/SettingsPage';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -28,8 +30,8 @@ function AppRoutes() {
       >
         <Route index element={<Navigate to="smart-clipboard" replace />} />
         <Route path="smart-clipboard" element={<SmartClipboardPage />} />
-        <Route path="order-reconciliation" element={<div className="flex-1 flex items-center justify-center p-8 bg-slate-50/50"><div className="text-center"><h2 className="text-xl font-bold text-slate-800">Order Reconciliation</h2><p className="text-slate-500 mt-2">Generate this page next using Stitch.</p></div></div>} />
-        <Route path="reverse-logistics" element={<div className="flex-1 flex items-center justify-center p-8 bg-slate-50/50"><div className="text-center"><h2 className="text-xl font-bold text-slate-800">Reverse Logistics AI</h2><p className="text-slate-500 mt-2">Generate this page next using Stitch.</p></div></div>} />
+        <Route path="order-reconciliation" element={<OrderReconciliationPage />} />
+        <Route path="reverse-logistics" element={<ReverseLogisticsPage />} />
         <Route path="settings" element={<SettingsPage />} />
       </Route>
       <Route path="*" element={<Navigate to="/login" replace />} />

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Truck, AlertTriangle, CheckCircle2, RefreshCw, AlertOctagon, ArrowRight, Plus } from 'lucide-react';
+import { AlertTriangle, CheckCircle2, RefreshCw, AlertOctagon, ArrowRight, Plus } from 'lucide-react';
 import { TopHeader } from '../components/TopHeader';
 import AddProductModal from '../components/AddProductModal';
 
@@ -62,27 +62,7 @@ export default function SmartClipboardPage() {
           </div>
 
           {/* Tablet Clipboard Card Container */}
-          <div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden mb-12">
-            {/* Staging Manifest Header */}
-            <div className="px-6 py-4 bg-slate-50/70 border-b border-slate-200/80 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-sky-500 text-white flex items-center justify-center shadow-sm">
-                  <Truck className="w-4 h-4" />
-                </div>
-                <div>
-                  <h3 className="text-sm font-bold text-slate-900">Active Loading Queue: Trailer #58-BK-TL</h3>
-                  <p className="text-[11px] text-slate-500 font-mono">Assigned Carrier: Maersk Logistics BV • Staging Lane 04B</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-3">
-                <span className="text-xs text-slate-500 font-medium">Auto-Syncing:</span>
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                  RFID Sensor Active
-                </span>
-              </div>
-            </div>
+          <div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden mb-6">
 
             {/* Product Items Table */}
             <div className="p-6">
@@ -220,7 +200,7 @@ export default function SmartClipboardPage() {
                 </table>
               </div>
 
-              <div className="px-6 py-4 border-t border-slate-100 bg-slate-50 flex items-center justify-end mt-6">
+              <div className="px-6 py-4 border-t border-slate-100 bg-slate-50 flex items-center justify-end">
                 <button className={`px-5 py-2 text-white font-semibold text-xs rounded-lg transition-all shadow-sm ${quantities.valve !== 100 ? 'bg-amber-500 hover:bg-amber-600 shadow-amber-500/20' : 'bg-emerald-600 hover:bg-emerald-700 shadow-emerald-600/20'}`}>
                   {quantities.valve !== 100 ? 'Submit with Exceptions' : 'Submit & Close Dispatch'}
                 </button>
