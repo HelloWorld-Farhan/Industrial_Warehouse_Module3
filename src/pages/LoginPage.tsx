@@ -90,7 +90,7 @@ export default function LoginPage() {
             </div>
           </motion.div>
 
-          <div className="relative h-[240px]">
+          <motion.div layout className="mb-12">
             <AnimatePresence mode="wait">
               {step === 'login' && (
                 <motion.div
@@ -99,15 +99,14 @@ export default function LoginPage() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="absolute inset-0"
                 >
-                  <h1 className="text-5xl lg:text-6xl font-black text-white tracking-tighter leading-[1.1] mb-6">
+                  <h1 className="text-5xl lg:text-6xl font-black text-white tracking-tighter leading-[1.1] mb-5">
                     Automate <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-500">
                       Warehouse Operations
                     </span>
                   </h1>
-                  <p className="text-lg text-slate-400 leading-relaxed max-w-lg">
+                  <p className="text-base text-slate-400 leading-relaxed max-w-lg">
                     AeroLogix AI streamlines loading dock coordination, autonomous quantity reconciliation, and real-time reverse logistics telemetry.
                   </p>
                 </motion.div>
@@ -119,15 +118,14 @@ export default function LoginPage() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="absolute inset-0"
                 >
-                  <h1 className="text-5xl lg:text-6xl font-black text-white tracking-tighter leading-[1.1] mb-6">
+                  <h1 className="text-5xl lg:text-6xl font-black text-white tracking-tighter leading-[1.1] mb-5">
                     Join the <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-200 to-emerald-500">
                       Smart Warehouse
                     </span>
                   </h1>
-                  <p className="text-lg text-slate-400 leading-relaxed max-w-lg">
+                  <p className="text-base text-slate-400 leading-relaxed max-w-lg">
                     Register your facility to access AI-driven order reconciliation, auto-allocated quarantine buffers, and 99.4% inference accuracy.
                   </p>
                 </motion.div>
@@ -139,21 +137,20 @@ export default function LoginPage() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="absolute inset-0"
                 >
-                  <h1 className="text-5xl lg:text-6xl font-black text-white tracking-tighter leading-[1.1] mb-6">
+                  <h1 className="text-5xl lg:text-6xl font-black text-white tracking-tighter leading-[1.1] mb-5">
                     Secure <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-blue-500">
                       Warehouse Access
                     </span>
                   </h1>
-                  <p className="text-lg text-slate-400 leading-relaxed max-w-lg">
+                  <p className="text-base text-slate-400 leading-relaxed max-w-lg">
                     Protecting enterprise inventory data with military-grade encryption and biometric supervisor protocols.
                   </p>
                 </motion.div>
               )}
             </AnimatePresence>
-          </div>
+          </motion.div>
         </div>
 
         <motion.div layout className="space-y-6 max-w-lg relative z-20">
