@@ -30,7 +30,6 @@ function AppRoutes() {
         <Route path="smart-clipboard" element={<SmartClipboardPage />} />
         <Route path="order-reconciliation" element={<div className="flex-1 flex items-center justify-center p-8 bg-slate-50/50"><div className="text-center"><h2 className="text-xl font-bold text-slate-800">Order Reconciliation</h2><p className="text-slate-500 mt-2">Generate this page next using Stitch.</p></div></div>} />
         <Route path="reverse-logistics" element={<div className="flex-1 flex items-center justify-center p-8 bg-slate-50/50"><div className="text-center"><h2 className="text-xl font-bold text-slate-800">Reverse Logistics AI</h2><p className="text-slate-500 mt-2">Generate this page next using Stitch.</p></div></div>} />
-        <Route path="warehouse-analytics" element={<div className="flex-1 flex items-center justify-center p-8 bg-slate-50/50"><div className="text-center"><h2 className="text-xl font-bold text-slate-800">Warehouse Analytics</h2><p className="text-slate-500 mt-2">Generate this page next using Stitch.</p></div></div>} />
         <Route path="settings" element={<SettingsPage />} />
       </Route>
       <Route path="*" element={<Navigate to="/login" replace />} />

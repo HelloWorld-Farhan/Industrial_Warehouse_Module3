@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink, useLocation, useOutlet, useNavigate } from 'react-router-dom';
-import { Layers, FileText, FileEdit, RefreshCw, BarChart3, LogOut, Menu, X, Settings } from 'lucide-react';
+import { Layers, FileText, FileEdit, RefreshCw, LogOut, Menu, X, Settings } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -14,11 +14,10 @@ export default function DashboardLayout() {
   // Close mobile menu when navigating
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
-  const navItems = [
+  const navItems: Array<{to: string; icon: any; label: string; activeIconColor?: string; inactiveIconColor?: string; hasPulse?: boolean}> = [
     { to: '/dashboard/smart-clipboard', icon: FileText, label: 'Smart Clipboard' },
     { to: '/dashboard/order-reconciliation', icon: FileEdit, label: 'Order Reconciliation' },
     { to: '/dashboard/reverse-logistics', icon: RefreshCw, label: 'Reverse Logistics AI' },
-    { to: '/dashboard/warehouse-analytics', icon: BarChart3, label: 'Warehouse Analytics' },
   ];
 
   return (

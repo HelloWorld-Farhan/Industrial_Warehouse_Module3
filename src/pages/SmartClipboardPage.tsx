@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Truck, AlertTriangle, CheckCircle2, Search, Calendar, ChevronDown, Shield, Printer, RefreshCw, MapPin, AlertOctagon, ArrowRight, Plus } from 'lucide-react';
+import { useState } from 'react';
+import { Truck, AlertTriangle, CheckCircle2, RefreshCw, AlertOctagon, ArrowRight, Plus } from 'lucide-react';
 import { TopHeader } from '../components/TopHeader';
 import AddProductModal from '../components/AddProductModal';
 
