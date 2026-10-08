@@ -165,26 +165,49 @@ export default function LoginPage() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ duration: 0.5 }}
-                className="space-y-6"
+                className="space-y-5"
               >
-                <div className="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
-                  <div className="flex items-center gap-3 mb-2">
-                    <ShieldCheck className="w-5 h-5 text-emerald-400" />
-                    <h3 className="font-bold text-white text-sm">Real-Time Exception Handling</h3>
+                {/* Feature Card 1 */}
+                <motion.div 
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  className="relative p-6 rounded-3xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl overflow-hidden group shadow-2xl"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/20 blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                  
+                  <div className="relative z-10 flex gap-5">
+                    <div className="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-emerald-400/20 to-emerald-900/40 border border-emerald-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-[0_0_20px_rgba(52,211,153,0.15)] group-hover:shadow-[0_0_25px_rgba(52,211,153,0.3)]">
+                      <ShieldCheck className="w-6 h-6 text-emerald-400" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-white text-base tracking-tight mb-1.5 group-hover:text-emerald-300 transition-colors">Real-Time Exception Handling</h3>
+                      <p className="text-[13px] text-slate-400 leading-relaxed font-medium">
+                        Instantly freeze dispatches upon quantity divergence and mandate manual quality assurance loops before gate-out.
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-xs text-slate-400 leading-relaxed">
-                    Instantly freeze dispatches upon quantity divergence and mandate manual quality assurance loops before gate-out.
-                  </p>
-                </div>
-                <div className="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Globe2 className="w-5 h-5 text-sky-400" />
-                    <h3 className="font-bold text-white text-sm">Predictive Transit Scoring</h3>
+                </motion.div>
+
+                {/* Feature Card 2 */}
+                <motion.div 
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  className="relative p-6 rounded-3xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl overflow-hidden group shadow-2xl"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-sky-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="absolute bottom-0 right-0 w-32 h-32 bg-sky-500/20 blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                  
+                  <div className="relative z-10 flex gap-5">
+                    <div className="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-sky-400/20 to-sky-900/40 border border-sky-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-[0_0_20px_rgba(56,189,248,0.15)] group-hover:shadow-[0_0_25px_rgba(56,189,248,0.3)]">
+                      <Globe2 className="w-6 h-6 text-sky-400" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-white text-base tracking-tight mb-1.5 group-hover:text-sky-300 transition-colors">Predictive Transit Scoring</h3>
+                      <p className="text-[13px] text-slate-400 leading-relaxed font-medium">
+                        Continuously evaluate outbound cargo for reverse logistics risks using multi-year carrier damage claims models.
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-xs text-slate-400 leading-relaxed">
-                    Continuously evaluate outbound cargo for reverse logistics risks using multi-year carrier damage claims models.
-                  </p>
-                </div>
+                </motion.div>
               </motion.div>
             )}
             
@@ -195,26 +218,49 @@ export default function LoginPage() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ duration: 0.5 }}
-                className="space-y-6"
+                className="space-y-5"
               >
-                <div className="p-5 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-sm hover:bg-emerald-500/20 transition-colors">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Building2 className="w-5 h-5 text-emerald-400" />
-                    <h3 className="font-bold text-white text-sm">Automated Buffer Allocation</h3>
+                {/* Feature Card 1 */}
+                <motion.div 
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  className="relative p-6 rounded-3xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl overflow-hidden group shadow-2xl"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/20 blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                  
+                  <div className="relative z-10 flex gap-5">
+                    <div className="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-emerald-400/20 to-emerald-900/40 border border-emerald-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-[0_0_20px_rgba(52,211,153,0.15)] group-hover:shadow-[0_0_25px_rgba(52,211,153,0.3)]">
+                      <Building2 className="w-6 h-6 text-emerald-400" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-white text-base tracking-tight mb-1.5 group-hover:text-emerald-300 transition-colors">Automated Buffer Allocation</h3>
+                      <p className="text-[13px] text-slate-400 leading-relaxed font-medium">
+                        Pre-allocate WMS quarantine shelf capacity to guarantee zero dock congestion in the event of high-risk returns.
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-xs text-emerald-100/70 leading-relaxed">
-                    Pre-allocate WMS quarantine shelf capacity to guarantee zero dock congestion in the event of high-risk returns.
-                  </p>
-                </div>
-                <div className="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Layers className="w-5 h-5 text-blue-400" />
-                    <h3 className="font-bold text-white text-sm">Seamless ERP Integration</h3>
+                </motion.div>
+
+                {/* Feature Card 2 */}
+                <motion.div 
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  className="relative p-6 rounded-3xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl overflow-hidden group shadow-2xl"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="absolute bottom-0 right-0 w-32 h-32 bg-blue-500/20 blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                  
+                  <div className="relative z-10 flex gap-5">
+                    <div className="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-blue-400/20 to-blue-900/40 border border-blue-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-[0_0_20px_rgba(96,165,250,0.15)] group-hover:shadow-[0_0_25px_rgba(96,165,250,0.3)]">
+                      <Layers className="w-6 h-6 text-blue-400" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-white text-base tracking-tight mb-1.5 group-hover:text-blue-300 transition-colors">Seamless ERP Integration</h3>
+                      <p className="text-[13px] text-slate-400 leading-relaxed font-medium">
+                        Connect instantly with your central WMS to auto-sync commercial invoices, purchase orders, and loading manifests.
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-xs text-slate-400 leading-relaxed">
-                    Connect instantly with your central WMS to auto-sync commercial invoices, purchase orders, and loading manifests.
-                  </p>
-                </div>
+                </motion.div>
               </motion.div>
             )}
             
@@ -225,17 +271,28 @@ export default function LoginPage() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ duration: 0.5 }}
-                className="space-y-6"
+                className="space-y-5"
               >
-                <div className="p-5 rounded-2xl bg-blue-500/10 border border-blue-500/20 backdrop-blur-sm hover:bg-blue-500/20 transition-colors">
-                  <div className="flex items-center gap-3 mb-2">
-                    <ScanFace className="w-5 h-5 text-blue-400" />
-                    <h3 className="font-bold text-white text-sm">Zero-Trust Authentication</h3>
+                {/* Feature Card 1 */}
+                <motion.div 
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  className="relative p-6 rounded-3xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl overflow-hidden group shadow-2xl"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                  
+                  <div className="relative z-10 flex gap-5">
+                    <div className="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-blue-400/20 to-blue-900/40 border border-blue-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-[0_0_20px_rgba(96,165,250,0.15)] group-hover:shadow-[0_0_25px_rgba(96,165,250,0.3)]">
+                      <ScanFace className="w-6 h-6 text-blue-400" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-white text-base tracking-tight mb-1.5 group-hover:text-blue-300 transition-colors">Zero-Trust Authentication</h3>
+                      <p className="text-[13px] text-slate-400 leading-relaxed font-medium">
+                        Every login attempt requires cryptographically verified tokens to prevent unauthorized access.
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-xs text-blue-100/70 leading-relaxed">
-                    Every login attempt requires cryptographically verified tokens to prevent unauthorized access.
-                  </p>
-                </div>
+                </motion.div>
               </motion.div>
             )}
           </AnimatePresence>
