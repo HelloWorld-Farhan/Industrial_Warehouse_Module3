@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { NavLink, useLocation, useOutlet, useNavigate } from 'react-router-dom';
-import { Layers, FileText, FileEdit, RefreshCw, LogOut, Menu, X, Settings } from 'lucide-react';
+import { Layers, FileText, FileEdit, RefreshCw, LogOut, Menu, X, Settings, RefreshCcw, CheckCircle, Database } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
 import { motion, AnimatePresence } from 'framer-motion';
+import { TopHeader } from './TopHeader';
 
 export default function DashboardLayout() {
   const { logout } = useAuth();
@@ -10,9 +11,25 @@ export default function DashboardLayout() {
   const location = useLocation();
   const outlet = useOutlet();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSyncModalOpen, setIsSyncModalOpen] = useState(false);
+  const [syncStep, setSyncStep] = useState<'idle' | 'syncing' | 'success'>('idle');
 
   // Close mobile menu when navigating
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
+  const handleSync = () => {
+    setIsSyncModalOpen(true);
+    setSyncStep('syncing');
+    
+    // Simulate syncing process
+    setTimeout(() => {
+      setSyncStep('success');
+      setTimeout(() => {
+        setIsSyncModalOpen(false);
+        setSyncStep('idle');
+      }, 2000); // Auto close after success
+    }, 3000); // 3 second sync simulation
+  };
 
   const navItems: Array<{to: string; icon: any; label: string; activeIconColor?: string; inactiveIconColor?: string; hasPulse?: boolean}> = [
     { to: '/dashboard/smart-clipboard', icon: FileText, label: 'Smart Clipboard' },
@@ -183,6 +200,20 @@ export default function DashboardLayout() {
 
         {/* Main Dashboard Content Area */}
         <main className="flex-1 flex flex-col min-w-0 bg-white overflow-hidden relative">
+          
+          <TopHeader 
+            searchPlaceholder="Search manifests, BOL, container or HS code..."
+            actionButton={
+              <button 
+                onClick={handleSync}
+                className="bg-[#0F172A] hover:bg-[#1E293B] text-white px-5 py-2.5 rounded-xl text-[13px] font-bold transition-all flex items-center gap-2 shadow-lg shadow-slate-200 active:scale-95"
+              >
+                <RefreshCcw className="w-4 h-4 text-sky-400" /> 
+                Sync Manifest & WMS
+              </button>
+            }
+          />
+
           <AnimatePresence mode="wait">
             <motion.div
               key={location.pathname}
@@ -196,6 +227,62 @@ export default function DashboardLayout() {
             </motion.div>
           </AnimatePresence>
         </main>
+
+        {/* Sync Manifest Modal */}
+        <AnimatePresence>
+          {isSyncModalOpen && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+              <motion.div 
+                initial={{ opacity: 0 }} 
+                animate={{ opacity: 1 }} 
+                exit={{ opacity: 0 }}
+                className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm"
+              />
+              <motion.div 
+                initial={{ scale: 0.95, opacity: 0, y: 20 }}
+                animate={{ scale: 1, opacity: 1, y: 0 }}
+                exit={{ scale: 0.95, opacity: 0, y: 20 }}
+                className="bg-white rounded-[24px] p-8 w-full max-w-sm shadow-2xl relative z-10 flex flex-col items-center text-center overflow-hidden"
+              >
+                {syncStep === 'syncing' ? (
+                  <>
+                    <div className="relative w-20 h-20 mb-6">
+                      <div className="absolute inset-0 rounded-full border-4 border-slate-100"></div>
+                      <div className="absolute inset-0 rounded-full border-4 border-sky-500 border-t-transparent animate-spin"></div>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <Database className="w-8 h-8 text-sky-500 animate-pulse" />
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Syncing WMS Data</h3>
+                    <p className="text-sm text-slate-500">Pulling latest manifests, BOLs, and SKU data from the central warehouse management system...</p>
+                    
+                    {/* Simulated progress bar */}
+                    <div className="w-full h-1.5 bg-slate-100 rounded-full mt-6 overflow-hidden">
+                      <motion.div 
+                        initial={{ width: "0%" }}
+                        animate={{ width: "90%" }}
+                        transition={{ duration: 3, ease: "easeOut" }}
+                        className="h-full bg-sky-500"
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <motion.div
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    className="flex flex-col items-center"
+                  >
+                    <div className="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-6">
+                      <CheckCircle className="w-10 h-10" />
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Sync Complete!</h3>
+                    <p className="text-sm text-slate-500">All warehouse manifests and smart clipboard data have been updated.</p>
+                  </motion.div>
+                )}
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>
     </motion.div>
   );
 }
