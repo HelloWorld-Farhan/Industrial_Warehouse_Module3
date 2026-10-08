@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Truck, AlertTriangle, CheckCircle2, Search, Calendar, ChevronDown, Shield, Printer, RefreshCw, MapPin, AlertOctagon, ArrowRight, Plus } from 'lucide-react';
 import { TopHeader } from '../components/TopHeader';
+import AddProductModal from '../components/AddProductModal';
 
 export default function SmartClipboardPage() {
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [quantities, setQuantities] = useState({
     valve: 80,
     flange: 250,
@@ -42,28 +44,20 @@ export default function SmartClipboardPage() {
               </div>
               <div className="flex items-center gap-4 mt-1">
                 <h1 className="text-2xl font-bold text-slate-900 tracking-tight">The Digital Clipboard (Warehouse Supervisor)</h1>
-                <button className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-semibold transition-colors">
-                  <Plus className="w-3.5 h-3.5" />
-                  Add Warehouse Product
-                </button>
               </div>
               <p className="text-xs text-slate-500 mt-1 max-w-2xl">
                 Ruggedized tablet interface for outbound staging dock Bay 14. Real-time verification of physical units packed vs ERP purchase order.
               </p>
             </div>
             
-            <div className="flex items-center gap-4 bg-slate-50 p-3 rounded-xl border border-slate-200/60 shrink-0">
-              <div className="text-right">
-                <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Consignment ID</span>
-                <span className="text-sm font-bold font-mono text-slate-800">TRK-2025-084-NL</span>
-              </div>
-              <div className="h-8 w-px bg-slate-200"></div>
-              <div className="text-right">
-                <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Target Destination</span>
-                <span className="text-xs font-bold text-slate-800 flex items-center gap-1">
-                  <MapPin className="w-3 h-3 text-rose-500" /> Rotterdam Port (Maasvlakte)
-                </span>
-              </div>
+            <div className="shrink-0">
+              <button 
+                onClick={() => setIsAddModalOpen(true)}
+                className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-sm font-bold transition-all active:scale-95"
+              >
+                <Plus className="w-4 h-4" />
+                Add Warehouse Product
+              </button>
             </div>
           </div>
 
@@ -270,6 +264,12 @@ export default function SmartClipboardPage() {
           )}
         </section>
       </div>
+
+      {/* Add Product Modal */}
+      <AddProductModal 
+        isOpen={isAddModalOpen} 
+        onClose={() => setIsAddModalOpen(false)} 
+      />
     </div>
   );
 }
