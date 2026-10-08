@@ -86,7 +86,7 @@ export default function LoginPage() {
               <div className="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
                 AeroLogix <span className="text-[10px] px-2 py-0.5 rounded-md bg-white/10 text-white font-mono font-bold border border-white/20">AI</span>
               </div>
-              <p className="text-xs text-slate-400 font-medium tracking-wide">Enterprise Customs & Freight</p>
+              <p className="text-xs text-slate-400 font-medium tracking-wide">Warehouse Intelligence Suite</p>
             </div>
           </motion.div>
 
@@ -104,11 +104,11 @@ export default function LoginPage() {
                   <h1 className="text-5xl lg:text-6xl font-black text-white tracking-tighter leading-[1.1] mb-6">
                     Automate <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-500">
-                      Global Customs
+                      Warehouse Operations
                     </span>
                   </h1>
                   <p className="text-lg text-slate-400 leading-relaxed max-w-lg">
-                    AeroLogix AI streamlines cross-border trade documentation, duty calculation, and risk telemetry directly from your ERP.
+                    AeroLogix AI streamlines loading dock coordination, autonomous quantity reconciliation, and real-time reverse logistics telemetry.
                   </p>
                 </motion.div>
               )}
@@ -124,11 +124,11 @@ export default function LoginPage() {
                   <h1 className="text-5xl lg:text-6xl font-black text-white tracking-tighter leading-[1.1] mb-6">
                     Join the <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-200 to-emerald-500">
-                      Trade Network
+                      Smart Warehouse
                     </span>
                   </h1>
                   <p className="text-lg text-slate-400 leading-relaxed max-w-lg">
-                    Register your organization to access automated clearance workflows, real-time tracking, and multi-jurisdiction compliance.
+                    Register your facility to access AI-driven order reconciliation, auto-allocated quarantine buffers, and 99.4% inference accuracy.
                   </p>
                 </motion.div>
               )}
@@ -144,11 +144,11 @@ export default function LoginPage() {
                   <h1 className="text-5xl lg:text-6xl font-black text-white tracking-tighter leading-[1.1] mb-6">
                     Secure <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-blue-500">
-                      Identity Verification
+                      Warehouse Access
                     </span>
                   </h1>
                   <p className="text-lg text-slate-400 leading-relaxed max-w-lg">
-                    Protecting enterprise trade data with military-grade encryption and strict SOC2 access controls.
+                    Protecting enterprise inventory data with military-grade encryption and biometric supervisor protocols.
                   </p>
                 </motion.div>
               )}
@@ -170,19 +170,19 @@ export default function LoginPage() {
                 <div className="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
                   <div className="flex items-center gap-3 mb-2">
                     <ShieldCheck className="w-5 h-5 text-emerald-400" />
-                    <h3 className="font-bold text-white text-sm">Enterprise-Grade Security</h3>
+                    <h3 className="font-bold text-white text-sm">Real-Time Exception Handling</h3>
                   </div>
                   <p className="text-xs text-slate-400 leading-relaxed">
-                    Fully compliant with SOC2 Type II, ISO 27001, and CBP 19 CFR regulations for secure trade data management.
+                    Instantly freeze dispatches upon quantity divergence and mandate manual quality assurance loops before gate-out.
                   </p>
                 </div>
                 <div className="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
                   <div className="flex items-center gap-3 mb-2">
                     <Globe2 className="w-5 h-5 text-sky-400" />
-                    <h3 className="font-bold text-white text-sm">Multi-Jurisdiction Gateway</h3>
+                    <h3 className="font-bold text-white text-sm">Predictive Transit Scoring</h3>
                   </div>
                   <p className="text-xs text-slate-400 leading-relaxed">
-                    Seamlessly interact with EU TARIC, US-EAST, and Trans-Pacific customs agencies from a single portal.
+                    Continuously evaluate outbound cargo for reverse logistics risks using multi-year carrier damage claims models.
                   </p>
                 </div>
               </motion.div>
@@ -200,10 +200,10 @@ export default function LoginPage() {
                 <div className="p-5 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-sm hover:bg-emerald-500/20 transition-colors">
                   <div className="flex items-center gap-3 mb-2">
                     <Building2 className="w-5 h-5 text-emerald-400" />
-                    <h3 className="font-bold text-white text-sm">Organization Workspaces</h3>
+                    <h3 className="font-bold text-white text-sm">Automated Buffer Allocation</h3>
                   </div>
                   <p className="text-xs text-emerald-100/70 leading-relaxed">
-                    Create a dedicated, isolated workspace for your entire logistics team with granular RBAC controls.
+                    Pre-allocate WMS quarantine shelf capacity to guarantee zero dock congestion in the event of high-risk returns.
                   </p>
                 </div>
                 <div className="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
@@ -212,7 +212,7 @@ export default function LoginPage() {
                     <h3 className="font-bold text-white text-sm">Seamless ERP Integration</h3>
                   </div>
                   <p className="text-xs text-slate-400 leading-relaxed">
-                    Connect instantly with SAP, Oracle, and Microsoft Dynamics to sync commercial invoices and packing lists.
+                    Connect instantly with your central WMS to auto-sync commercial invoices, purchase orders, and loading manifests.
                   </p>
                 </div>
               </motion.div>
