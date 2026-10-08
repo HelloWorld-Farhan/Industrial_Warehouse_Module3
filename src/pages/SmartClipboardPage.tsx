@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { AlertTriangle, CheckCircle2, RefreshCw, AlertOctagon, ArrowRight, Plus } from 'lucide-react';
-import { TopHeader } from '../components/TopHeader';
+import { AlertTriangle, CheckCircle2, AlertOctagon, ArrowRight, Plus } from 'lucide-react';
+
 import AddProductModal from '../components/AddProductModal';
 
 export default function SmartClipboardPage() {
@@ -21,15 +21,7 @@ export default function SmartClipboardPage() {
   return (
     <div className="flex-1 flex flex-col bg-slate-50/50 h-full overflow-hidden">
       
-      <TopHeader 
-        searchPlaceholder="Search manifest, SKU, BOL, container or trailer #..."
-        actionButton={
-          <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold shadow-sm transition-all active:scale-95">
-            <RefreshCw className="w-3.5 h-3.5 text-sky-400" />
-            <span>Sync Manifest & WMS</span>
-          </button>
-        }
-      />
+
 
       {/* SCROLLABLE PAGE CONTAINER */}
       <div className="flex-1 overflow-y-auto custom-scrollbar p-7">
