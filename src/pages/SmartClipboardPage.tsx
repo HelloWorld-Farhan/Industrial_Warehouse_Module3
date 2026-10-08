@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Truck, AlertTriangle, CheckCircle2, Search, Calendar, ChevronDown, Shield, Printer, RefreshCw, MapPin } from 'lucide-react';
+import { Truck, AlertTriangle, CheckCircle2, Search, Calendar, ChevronDown, Shield, Printer, RefreshCw, MapPin, AlertOctagon, ArrowRight } from 'lucide-react';
 import { TopHeader } from '../components/TopHeader';
 
 export default function SmartClipboardPage() {
@@ -220,7 +220,42 @@ export default function SmartClipboardPage() {
                 </table>
               </div>
 
-              <div className="px-6 py-4 border-t border-slate-100 bg-slate-50 flex items-center justify-end gap-3 mt-4 rounded-xl">
+              {/* CRITICAL WARNING BANNER */}
+              {quantities.valve !== 100 && (
+                <div className="mt-6 bg-rose-50/60 border border-rose-200 rounded-2xl p-5 flex flex-col md:flex-row gap-5 items-start md:items-center">
+                  <div className="bg-rose-500 text-white p-3 rounded-xl shrink-0 shadow-sm">
+                    <AlertOctagon className="w-6 h-6" />
+                  </div>
+                  
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-1.5">
+                      <h4 className="font-bold text-slate-900 text-[15px]">CRITICAL: Quantity Divergence Exception Detected</h4>
+                      <span className="bg-rose-100 text-rose-700 text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded border border-rose-200 font-mono">
+                        Dispatch Frozen
+                      </span>
+                    </div>
+                    
+                    <p className="text-xs text-slate-600 leading-relaxed mb-3">
+                      Trailer loading for <span className="font-bold text-rose-900">Cryogenic Titanium Valves (SKU-VALVE-8481-90)</span> records <span className="font-bold text-rose-900">{quantities.valve} units</span>, but Commercial ERP Purchase Order calls for <span className="font-bold text-rose-900">100 units</span>. Dispatch is automatically locked until Order Reconciliation Accountant resolves invoice & backorder records.
+                    </p>
+                    
+                    <div className="flex items-center gap-4 text-[11px] font-mono font-medium text-slate-500">
+                      <span>• Deficit: <span className="text-rose-600 font-bold">{quantities.valve - 100} Units</span></span>
+                      <span>• Financial Variance: <span className="text-rose-600 font-bold">-${((100 - quantities.valve) * 1845).toLocaleString()} USD</span></span>
+                      <span className="text-rose-400">• Automated Rule: ISO-9001 Lock</span>
+                    </div>
+                  </div>
+                  
+                  <div className="shrink-0">
+                    <button className="flex items-center gap-2 bg-[#E11D48] hover:bg-[#BE123C] text-white px-4 py-2.5 rounded-lg text-xs font-semibold transition-colors shadow-sm shadow-rose-500/20">
+                      View Reconciliation AI Agent
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              <div className="px-6 py-4 border-t border-slate-100 bg-slate-50 flex items-center justify-end gap-3 mt-6 rounded-xl">
                 <button className="px-4 py-2 text-slate-600 hover:text-slate-800 font-semibold text-xs rounded-lg transition-colors">
                   Save Draft
                 </button>
