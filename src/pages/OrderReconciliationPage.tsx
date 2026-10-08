@@ -505,53 +505,63 @@ export default function OrderReconciliationPage() {
                 </span>
               </div>
               <div className="bg-slate-950 text-slate-300 rounded-3xl p-5 shadow-2xl font-mono text-xs overflow-x-auto space-y-2 border-slate-900">
-                <div className="flex items-center gap-3 text-slate-400">
-                  <span className="text-slate-500">10:41:59.102 CET</span>
-                  <span className="text-sky-400 font-bold">
-                    [01_WAKE_TRIGGER]
-                  </span>
-                  <span className="">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3 text-slate-400">
+                  <div className="flex items-center gap-2 shrink-0">
+                    <span className="text-slate-500">10:41:59.102 CET</span>
+                    <span className="text-sky-400 font-bold">
+                      [01_WAKE_TRIGGER]
+                    </span>
+                  </div>
+                  <span className="flex-1">
                     Agent woken up by Smart Clipboard Divergence Event: 100
                     ordered vs 80 packed in Trailer #58-BK-TL.
                   </span>
                 </div>
-                <div className="flex items-center gap-3 text-slate-400">
-                  <span className="text-slate-500">10:41:59.214 CET</span>
-                  <span className="text-rose-400 font-bold">
-                    [02_BILLING_HOLD]
-                  </span>
-                  <span className="text-rose-300 font-semibold">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3 text-slate-400">
+                  <div className="flex items-center gap-2 shrink-0">
+                    <span className="text-slate-500">10:41:59.214 CET</span>
+                    <span className="text-rose-400 font-bold">
+                      [02_BILLING_HOLD]
+                    </span>
+                  </div>
+                  <span className="text-rose-300 font-semibold flex-1">
                     INVOICE DISPATCH HALTED - ERP BILLING HOLD ACTIVE on SAP
                     S/4HANA &amp; NetSuite (Webhook #BLK-8912-TX).
                   </span>
                 </div>
-                <div className="flex items-center gap-3 text-slate-400">
-                  <span className="text-slate-500">10:41:59.340 CET</span>
-                  <span className="text-sky-300 font-bold">
-                    [03_INVOICE_MOD]
-                  </span>
-                  <span className="">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3 text-slate-400">
+                  <div className="flex items-center gap-2 shrink-0">
+                    <span className="text-slate-500">10:41:59.340 CET</span>
+                    <span className="text-sky-300 font-bold">
+                      [03_INVOICE_MOD]
+                    </span>
+                  </div>
+                  <span className="flex-1">
                     Voided line item 100u ($184,500.00). Replaced with verified
                     line item 80u ($147,600.00) in INV-2024-9982-REV80.
                   </span>
                 </div>
-                <div className="flex items-center gap-3 text-slate-400">
-                  <span className="text-slate-500">10:41:59.488 CET</span>
-                  <span className="text-amber-400 font-bold">
-                    [04_BACKORDER_TAG]
-                  </span>
-                  <span className="">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3 text-slate-400">
+                  <div className="flex items-center gap-2 shrink-0">
+                    <span className="text-slate-500">10:41:59.488 CET</span>
+                    <span className="text-amber-400 font-bold">
+                      [04_BACKORDER_TAG]
+                    </span>
+                  </div>
+                  <span className="flex-1">
                     Tagged missing 20 items as 'Backorder' in central DB.
                     Dispatched Priority Ticket #BO-VALVE-20 to Procurement Lead
                     David Sterling.
                   </span>
                 </div>
-                <div className="flex items-center gap-3 text-slate-300 pt-1 border-t border-slate-800">
-                  <span className="text-slate-500">10:41:59.508 CET</span>
-                  <span className="text-emerald-400 font-bold">
-                    [CONSENSUS_VERIFIED]
-                  </span>
-                  <span className="text-emerald-300 font-semibold">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3 text-slate-300 pt-3 border-t border-slate-800 mt-2">
+                  <div className="flex items-center gap-2 shrink-0">
+                    <span className="text-slate-500">10:41:59.508 CET</span>
+                    <span className="text-emerald-400 font-bold">
+                      [CONSENSUS_VERIFIED]
+                    </span>
+                  </div>
+                  <span className="text-emerald-300 font-semibold flex-1">
                     All 4 Autonomous Pipeline Steps Completed in 406ms. Ready
                     for human authorization.
                   </span>
